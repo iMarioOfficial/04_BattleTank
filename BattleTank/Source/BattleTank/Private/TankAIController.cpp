@@ -5,6 +5,7 @@
 
 
 
+
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -22,12 +23,32 @@ void ATankAIController::BeginPlay()
 	
 }
 
-ATank * ATankAIController::GetPlayerTank() const
+ void ATankAIController::Tick(float DeltaTime)  {
+
+	 Super::Tick(DeltaTime);
+
+	 if (GetPlayerTank())    
+	 {
+		 //TODO Move towards to player
+		 
+		 
+		 // Aim towards the player
+		 GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+		 
+		 //Fire If ready
+
+	 }
+
+
+}
+
+ATank * ATankAIController::GetPlayerTank() const       //finds the player's, not AI's tank
 {
 
 	auto PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
 
 	if (!PlayerPawn) { return nullptr; }      // if null pointer, leave!!
+	
 	return Cast<ATank>(PlayerPawn);
 
 }
@@ -40,7 +61,6 @@ ATank* ATankAIController::GetControlledTank() const
 {
 
 	return Cast<ATank>(GetPawn());
-
 
 
 }
