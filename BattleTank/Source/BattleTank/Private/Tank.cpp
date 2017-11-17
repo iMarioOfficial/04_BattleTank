@@ -12,7 +12,7 @@ ATank::ATank()
 
 
 	//no need to protect pointer as  added at construction
-	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
+	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));  //sets name for blueprint thing
 }
 
 // Called when the game starts or when spawned
@@ -32,15 +32,23 @@ void ATank::Tick(float DeltaTime)
 // Called to bind functionality to input
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	Super::SetupPlayerInputComponent(PlayerInputComponent);          
 
 }
 
 
-void ATank::AimAt(FVector HitLocation) {
+void ATank::AimAt(FVector HitLocation) {              //this is here to have both AI and player use the same aiming component
 
-auto OurTankName = GetName();
+	
+	TankAimingComponent->AimAt(HitLocation);     //delegates the aiming to AimingComponent calss
 
-UE_LOG(LogTemp, Warning, TEXT("%s Aiming At: %s"), *OurTankName, *HitLocation.ToString());
+
+}
+
+void ATank::SetBarrelReference(UStaticMeshComponent* BarrelToSet)
+{
+	
+	TankAimingComponent->SetBarrelReference(BarrelToSet);
+
 
 }

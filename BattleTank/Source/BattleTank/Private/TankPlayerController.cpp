@@ -13,7 +13,7 @@ void ATankPlayerController::BeginPlay()
 
 	auto ControlledTank = GetControlledTank();
 
-	if (!ControlledTank)
+	if (!ControlledTank)            //makes sure player has a tank
 	{
 		UE_LOG(LogTemp, Warning, TEXT("PlayerController not possessing a tank!"));
 	}
@@ -29,33 +29,33 @@ void ATankPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	AimTowardsCrosshair();
+	AimTowardsCrosshair();           //aims every second
 
 
 }
-
-
 
 
 ATank* ATankPlayerController::GetControlledTank() const
 {
 
-	return Cast<ATank>(GetPawn());
+	return Cast<ATank>(GetPawn());          //method for use later. 
 
 
 
 }
 
-void  ATankPlayerController::AimTowardsCrosshair()
+
+
+void  ATankPlayerController::AimTowardsCrosshair() 
 {
-	if (!GetControlledTank()) { return; }
+	if (!GetControlledTank()) { return; }        //if no tank, fail-
 
 	
-	if (GetSightRayHitLocation(HitLocation))        //has a 'side-effect', is going to line trace
+	if (GetSightRayHitLocation(HitLocation))                     //if there is a valid ray hit location
 	{
 	
 		//tell controlled tank to aim at this point
-		GetControlledTank()->AimAt(HitLocation);
+		GetControlledTank()->AimAt(HitLocation);              //call aiming method
 
 
 			     
@@ -68,18 +68,19 @@ void  ATankPlayerController::AimTowardsCrosshair()
 
 
 
-bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
+bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const    //function used to pretty much call everything. It is used for when aiming such as above
 {
 	//FInd the crosshair position
 	int32 ViewportSizeX, ViewportSizeY;
 	GetViewportSize(ViewportSizeX, ViewportSizeY);
 
+	//this is getting where the reticle is
 	auto ScreenLocation = FVector2D(ViewportSizeX * CrossHairXLocation, ViewportSizeY * CrossHairYLocation);         // since  x is 1/2 way and crosshair x is 0.5, and the y to be 1/3 up and crosshair y is 0.333
 
-	//De-project the sceen position of the crosshair to a world direction
+	//sets up the variable to be able to be used for when calling GetLookVectorHitLocation()
 	FVector LookDirection;
 
-	if (GetLookDirection(ScreenLocation, LookDirection))
+	if (GetLookDirection(ScreenLocation, LookDirection))                 //if theres a valid look direction     
 	{
 
 		
@@ -95,7 +96,7 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
 
 
 
-bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection)const
+bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection)const      //gets where player is aiming in X,Y,Z
 {
 	FVector CameraWorldLocation;  //to be discarded
 
@@ -110,7 +111,7 @@ bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& 
 }
 
 //line trace along that lookdirection and see what we hit(up to max range)
-bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation)const
+bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation)const           //returns aiming location
 {
 	FHitResult HitResult;
 	auto StartLocation = PlayerCameraManager->GetCameraLocation();
