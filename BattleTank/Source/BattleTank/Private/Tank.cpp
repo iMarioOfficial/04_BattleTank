@@ -40,7 +40,7 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void ATank::AimAt(FVector HitLocation) {              //this is here to have both AI and player use the same aiming component
 
 	
-	TankAimingComponent->AimAt(HitLocation);     //delegates the aiming to AimingComponent calss
+	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);     //delegates the aiming to AimingComponent calss
 
 
 }

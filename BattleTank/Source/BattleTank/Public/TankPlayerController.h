@@ -40,7 +40,7 @@ private:
 			bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation)const;
 
 			UPROPERTY(EditAnywhere)
-				float LineTraceRange = 1000000;  //10 km( is in cm)
+				float LineTraceRange = 10000000000;  //100,000 km( is in cm)
 
 };
 

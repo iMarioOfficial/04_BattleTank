@@ -22,6 +22,7 @@ public:
 	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
 
 
+
 protected:
 	
 	UTankAimingComponent* TankAimingComponent = nullptr;   //makes pointer to the class so it can be used easily
@@ -43,6 +44,8 @@ private:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(EditAnywhere, Category = Firing)
+		float LaunchSpeed = 10000;   //TODO find sensible default
 
 	
 };

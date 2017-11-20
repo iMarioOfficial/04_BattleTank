@@ -38,14 +38,43 @@ void UTankAimingComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 	// ...
 }
 
-void UTankAimingComponent::AimAt(FVector HitLocation)
+
+
+void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 {
 
-	auto OurTankName = GetOwner()->GetName();
-	auto BarrelLocation = Barrel->GetComponentLocation().ToString();
+	if (!Barrel) { return; }     //if there is no barrel then fail
+
+	FVector OutLaunchVelocity;                                                                            //setting up variables for SuggestProjectileVelocity()
+	FVector StartLocation = Barrel->GetSocketLocation(FName("Projectile"));
+
+	
+	if ( UGameplayStatics::SuggestProjectileVelocity					//Calculate the OutLaunchVelocity
+			(
+			this,
+			OutLaunchVelocity,
+			StartLocation,
+			HitLocation,
+			LaunchSpeed,
+			false,
+			0,
+			0,
+			ESuggestProjVelocityTraceOption::DoNotTrace
+			)
+	   )		
+	
+	{
+		auto AimDirection = OutLaunchVelocity.GetSafeNormal(); //turns the launch velocity into a direction (green arrow to white one from the slides)
+		auto TankName = GetOwner()->GetName();
+
+		UE_LOG(LogTemp, Warning, TEXT("%s Aiming At %s"),*TankName, *AimDirection.ToString());  //telling us which direction to aim if we wanna hit whatever we're aiming at
+	
+	}	//if no solution then do nothing
 
 
-UE_LOG(LogTemp, Warning, TEXT("%s Aiming At: %s from %s"), *OurTankName, *HitLocation.ToString(), *BarrelLocation);
+	         
+
+
 
 }
 
