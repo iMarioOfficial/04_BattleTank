@@ -34,10 +34,14 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		this,
 		OutLaunchVelocity,
 		StartLocation, //out parameter
-		HitLocation, LaunchSpeed,
-		ESuggestProjVelocityTraceOption::DoNotTrace
+		HitLocation,
+		LaunchSpeed,
+		false,
+		0,
+		0,
+		ESuggestProjVelocityTraceOption::DoNotTrace  //this parameter must be there to prevent bug
 	);
-	   		
+
 	if (bHaveAimSolution)
 	{
 		auto AimDirection = OutLaunchVelocity.GetSafeNormal(); //turns the launch velocity into a direction (green arrow to white one from the slides)
@@ -45,12 +49,12 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 
 		auto Time = GetWorld()->GetTimeSeconds();
 		UE_LOG(LogTemp, Warning, TEXT("%f: Aim Solution Found"), Time)
-	
-	} // if no solution	
-	
-	auto Time = GetWorld()->GetTimeSeconds();
-	UE_LOG(LogTemp, Warning, TEXT("%f : No Aiming Solution Found"), Time)
 
+	} else // if no solution	
+	{
+		auto Time = GetWorld()->GetTimeSeconds();
+		UE_LOG(LogTemp, Warning, TEXT("%f : No Aiming Solution Found"), Time)
+	}	
 
 
 }
