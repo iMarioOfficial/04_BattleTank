@@ -7,6 +7,7 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+class UTankBarrel; //forward declaration 
 
 UCLASS()
 class BATTLETANK_API ATank : public APawn
@@ -17,17 +18,12 @@ public:
 
 	void AimAt(FVector HitLocation);
 
-
 	UFUNCTION(BlueprintCallable, Category = Setup)
-	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
-
-
+	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
 protected:
 	
 	UTankAimingComponent* TankAimingComponent = nullptr;   //makes pointer to the class so it can be used easily
-
-
 
 
 private:
@@ -37,9 +33,6 @@ private:
 	
 	//sets default values
 	ATank();
-
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

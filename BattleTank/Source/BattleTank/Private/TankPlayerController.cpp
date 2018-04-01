@@ -28,7 +28,6 @@ void ATankPlayerController::BeginPlay()
 void ATankPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 	AimTowardsCrosshair();           //aims every second
 
 
@@ -62,9 +61,6 @@ void  ATankPlayerController::AimTowardsCrosshair()
 	}
 
 }
-
-
-
 
 
 
@@ -118,7 +114,7 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 	auto EndLocation = StartLocation + (LookDirection * LineTraceRange);          //start at start location and go out in the look direction to the range
 
 	FCollisionQueryParams Params;
-	Params.AddIgnoredActor(GetControlledTank());
+	Params.AddIgnoredActor(GetPawn());
 
 	if (GetWorld()->LineTraceSingleByChannel(
 		HitResult,
