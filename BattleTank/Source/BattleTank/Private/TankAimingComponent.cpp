@@ -2,7 +2,7 @@
 
 #include "TankAimingComponent.h"
 #include "TankBarrel.h"
-
+#include "Turret.h"
 
 
 // Sets default values for this component's properties
@@ -19,6 +19,11 @@ void UTankAimingComponent::SetBarrelReference(UTankBarrel* BarrelToSet)
 {
 	Barrel = BarrelToSet;
 
+}
+
+void UTankAimingComponent::SetTurretReference(UTurret * TurretToSet)
+{
+	Turret = TurretToSet;
 }
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
@@ -62,10 +67,12 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	//get delta between barrel rotation and AimDirection
-	auto BarrelRotator = Barrel->GetForwardVector().Rotation(); //turn the forward direction of barrel into roll,pitch and yaw
-	auto AimAsRotator = AimDirection.Rotation();
+	auto BarrelRotator = Barrel->GetForwardVector().Rotation(); //where I am aiming
+	auto AimAsRotator = AimDirection.Rotation(); //Where I want to aim
 	auto DeltaRotator = AimAsRotator - BarrelRotator;
 
 	Barrel->Elevate(DeltaRotator.Pitch);  //TODO remove magic number
+	Turret->Rotate(DeltaRotator.Yaw);
+	
 }
 
