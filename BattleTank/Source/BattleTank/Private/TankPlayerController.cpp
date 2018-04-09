@@ -90,8 +90,6 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const  
 
 }
 
-
-
 bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection)const      //gets where player is aiming in X,Y,Z
 {
 	FVector CameraWorldLocation;  //to be discarded

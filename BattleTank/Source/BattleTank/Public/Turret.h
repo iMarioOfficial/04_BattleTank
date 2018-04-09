@@ -3,8 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/World.h" //for getWorld
 #include "Components/StaticMeshComponent.h"
 #include "Turret.generated.h"
+
 
 /**
 *

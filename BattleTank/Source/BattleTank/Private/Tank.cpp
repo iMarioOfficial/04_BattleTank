@@ -39,6 +39,12 @@ void ATank::AimAt(FVector HitLocation) {              //this is here to have bot
 
 }
 
+void ATank::Fire()
+{
+	auto Time = GetWorld()->GetTimeSeconds();
+	UE_LOG(LogTemp, Warning, TEXT("%f : Tank Fired!"), Time);
+}
+
 void ATank::SetBarrelReference(UTankBarrel* BarrelToSet)
 {
 	
