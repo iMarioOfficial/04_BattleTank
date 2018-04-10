@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Tank.h"
-
-
+#include "TankBarrel.h"
+#include "Projectile.h"
 
 // Sets default values
 ATank::ATank()
@@ -10,10 +10,8 @@ ATank::ATank()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-
-
 	//no need to protect pointer as  added at construction
-	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));  //sets name for blueprint thing
+	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));  //adds aiming component to the tank blueprint
 }
 
 // Called when the game starts or when spawned
@@ -39,16 +37,11 @@ void ATank::AimAt(FVector HitLocation) {              //this is here to have bot
 
 }
 
-void ATank::Fire()
-{
-	auto Time = GetWorld()->GetTimeSeconds();
-	UE_LOG(LogTemp, Warning, TEXT("%f : Tank Fired!"), Time);
-}
-
 void ATank::SetBarrelReference(UTankBarrel* BarrelToSet)
 {
 	
 	TankAimingComponent->SetBarrelReference(BarrelToSet);
+	Barrel = BarrelToSet;
 
 
 }
@@ -59,4 +52,24 @@ void ATank::SetTurretReference(UTurret* TurretToSet)
 	TankAimingComponent->SetTurretReference(TurretToSet);
 
 
+}
+
+
+void ATank::Fire()
+{
+	
+
+	if (!Barrel) { return; }
+	
+		//spawn projectile at socket location of the barrel
+		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
+			ProjectileBlueprint,
+			Barrel->GetSocketLocation(FName("ProjectileSocket")),
+			Barrel->GetSocketRotation(FName("ProjectileSocket"))
+			);
+
+		Projectile->LaunchProjectile(LaunchSpeed);
+	
+
+	
 }
