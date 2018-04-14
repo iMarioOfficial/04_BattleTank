@@ -10,16 +10,6 @@ void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	auto PlayerTank = GetPlayerTank();
-
-	if (!PlayerTank)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("AIController can't find a player tank!"));                             //all of this playertank thing is to find a human player tank onto which to aim
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("AIController found player tank  :%s"), *(PlayerTank->GetName()));
-	}
 	
 }
 
@@ -27,40 +17,27 @@ void ATankAIController::BeginPlay()
 
 	 Super::Tick(DeltaTime);
 
-	 if (GetPlayerTank())    
+	auto PlayerTank = Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
+ 
+	auto ControlledTank = Cast<ATank>(GetPawn());
+
+	 if (PlayerTank)    
 	 {
 		 //TODO Move towards to player
 		 
 		 
 		 // Aim towards the player
-		 GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+		 ControlledTank->AimAt(PlayerTank->GetActorLocation());
 		 
 		 //Fire If ready
-
+		 ControlledTank->Fire();
 	 }
 
 
 }
 
-ATank * ATankAIController::GetPlayerTank() const       //finds the player's, not AI's tank
-{
-
-	auto PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
-
-	if (!PlayerPawn) { return nullptr; }      // if null pointer, leave!!
-	
-	return Cast<ATank>(PlayerPawn);
-
-}
 
 
 
 
 
-ATank* ATankAIController::GetControlledTank() const
-{
-
-	return Cast<ATank>(GetPawn());
-
-
-}

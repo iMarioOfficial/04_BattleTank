@@ -24,8 +24,6 @@ private:
 	
 		virtual void Tick(float DeltaTime) override;
 		
-		ATank* GetControlledTank() const;
-		
-		ATank* GetPlayerTank() const;              //gets the player(human) tank so that it can aim towards it
+
 	
 };
