@@ -12,9 +12,10 @@ ATank::ATank()
 
 	//no need to protect pointer as  added at construction
 	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));  //adds aiming component to the tank blueprint
+	
 }
 
-// Called when the game starts or when spawned
+// Called when the game starts or when spawned/
 void ATank::BeginPlay()
 {
 	Super::BeginPlay();

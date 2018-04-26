@@ -11,16 +11,7 @@ void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	auto ControlledTank = GetControlledTank();
 
-	if (!ControlledTank)            //makes sure player has a tank
-	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayerController not possessing a tank!"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayerController possessing :%s"), *(ControlledTank->GetName()));
-	}
 
 }
 

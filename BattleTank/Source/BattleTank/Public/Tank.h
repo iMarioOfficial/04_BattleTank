@@ -3,6 +3,7 @@
 #pragma once
 
 #include "TankAimingComponent.h"
+#include "TankMovementComponent.h"
 #include "CoreMinimal.h"
 #include "Engine/World.h" //for getWorld
 #include "GameFramework/Pawn.h"
@@ -35,7 +36,9 @@ public:
 protected:
 	
 	UTankAimingComponent* TankAimingComponent = nullptr;   //makes pointer to the class so it can be used easily
-
+	
+	UPROPERTY(BlueprintReadOnly)  //allows us to drag use movement component reference within blueprint
+	UTankMovementComponent* TankMovementComponent = nullptr; 
 
 private:
 	
