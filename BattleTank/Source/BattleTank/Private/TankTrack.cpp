@@ -2,6 +2,7 @@
 
 #include "TankTrack.h"
 
+
 void UTankTrack::SetThrottle(float Throttle)
 {
 	auto Name = GetName();
@@ -11,6 +12,7 @@ void UTankTrack::SetThrottle(float Throttle)
 	auto ForceLocation = GetComponentLocation();
 	auto TankRoot = Cast<UPrimitiveComponent>(GetOwner()->GetRootComponent()); // cast so we can add forces to it
 
+	
 	TankRoot->AddForceAtLocation(ForceApplied, ForceLocation);
 }
 

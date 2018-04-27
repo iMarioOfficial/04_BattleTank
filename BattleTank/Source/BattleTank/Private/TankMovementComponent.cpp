@@ -7,7 +7,7 @@
 
 void UTankMovementComponent::Initialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet)
 {
-	if (!LeftTrackToSet || !RightTrackToSet) { return; }
+	if (!LeftTrack || !RightTrack) { return; }
 
 	LeftTrack = LeftTrackToSet;
 	RightTrack = RightTrackToSet;
@@ -15,14 +15,29 @@ void UTankMovementComponent::Initialise(UTankTrack* LeftTrackToSet, UTankTrack* 
 
 void UTankMovementComponent::IntendMoveForward(float Throw)
 {
-	UE_LOG(LogTemp, Warning, TEXT(" Intend Move Forward throw: %f"), Throw);
+	if (!LeftTrack || !RightTrack) { return; }
 	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(Throw);
 }
 
 void UTankMovementComponent::IntendMoveBackwards(float Throw)
 {
-	UE_LOG(LogTemp, Warning, TEXT(" Intend Move Backwards throw: %f"), Throw);
+	if (!LeftTrack || !RightTrack) { return; }
 	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(Throw);
+}
+
+void UTankMovementComponent::IntendTurnRight(float Throw)
+{
+	if (!LeftTrack || !RightTrack) { return; }
+	LeftTrack->SetThrottle(Throw);
+	RightTrack->SetThrottle(-Throw);
+
+}
+
+void UTankMovementComponent::IntendTurnLeft(float Throw)
+{
+	if (!LeftTrack || !RightTrack) { return; }
+	RightTrack->SetThrottle(Throw);
+	LeftTrack->SetThrottle(-Throw);
 }
