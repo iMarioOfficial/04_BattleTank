@@ -28,14 +28,16 @@ public:
 	void IntendMoveBackwards(float Throw);
 
 	UFUNCTION(BlueprintCallable, Category = Input)
-		void IntendTurnRight(float Throw);
+	void IntendTurnRight(float Throw);
 	
 	UFUNCTION(BlueprintCallable, Category = Input)
-		void IntendTurnLeft(float Throw);
+	void IntendTurnLeft(float Throw);
 	
 	
 private:
 	UTankTrack* LeftTrack = nullptr;
 	UTankTrack* RightTrack = nullptr;
 	
+	//gets called constantly because it is inside the uNavComponent, which this class inherits from 
+	virtual void RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) override;  
 };
