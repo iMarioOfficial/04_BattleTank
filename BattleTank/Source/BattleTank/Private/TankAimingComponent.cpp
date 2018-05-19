@@ -15,14 +15,10 @@ UTankAimingComponent::UTankAimingComponent()
 	// ...
 }
 
-void UTankAimingComponent::SetBarrelReference(UTankBarrel* BarrelToSet)
+void UTankAimingComponent::Initialise(UTankBarrel* BarrelToSet, UTurret* TurretToSet)
 {
+	//no need to protect since if toset is null it will jsut set as nullptr, which it already is
 	Barrel = BarrelToSet;
-
-}
-
-void UTankAimingComponent::SetTurretReference(UTurret * TurretToSet)
-{
 	Turret = TurretToSet;
 }
 
@@ -58,6 +54,8 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
+	if (!Barrel || !Turret) { return; }
+
 	//get delta between barrel rotation and AimDirection
 	auto BarrelRotator = Barrel->GetForwardVector().Rotation(); //where I am aiming
 	auto AimAsRotator = AimDirection.Rotation(); //Where I want to aim
