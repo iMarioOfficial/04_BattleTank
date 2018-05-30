@@ -11,8 +11,6 @@ void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-
-
 }
 
 

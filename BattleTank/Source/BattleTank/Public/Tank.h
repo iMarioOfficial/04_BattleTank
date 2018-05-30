@@ -38,7 +38,7 @@ protected:
 private:
 	
 	// Called when the game starts or when spawned
-
+	virtual void BeginPlay() override;
 	
 	//sets default values
 	ATank();
