@@ -5,6 +5,7 @@
 #include "Projectile.h"
 
 
+
 void ATank::BeginPlay()
 {
 	Super::BeginPlay(); //Needed for BP BeginPlay to work
@@ -52,5 +53,5 @@ void ATank::Fire()
 		LastFireTime = FPlatformTime::Seconds();
 
 	}
-	
+
 }
