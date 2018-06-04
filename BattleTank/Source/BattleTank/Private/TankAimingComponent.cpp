@@ -17,8 +17,6 @@ UTankAimingComponent::UTankAimingComponent()
 
 void UTankAimingComponent::Initialise(UTankBarrel* BarrelToSet, UTurret* TurretToSet)
 {
-
-
 	//no need to protect since if toset is null it will jsut set as nullptr, which it already is
 	Barrel = BarrelToSet;
 	Turret = TurretToSet;
