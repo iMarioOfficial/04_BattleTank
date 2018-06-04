@@ -12,7 +12,7 @@ void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 	auto AimingComponent = GetControlledTank()->FindComponentByClass<UTankAimingComponent>();
-	if (AimingComponent) 
+	if (ensure(AimingComponent)) 
 	{
 	FoundAimingComponent(AimingComponent);
 	}
@@ -39,7 +39,7 @@ ATank* ATankPlayerController::GetControlledTank() const
 
 void  ATankPlayerController::AimTowardsCrosshair() 
 {
-	if (!GetControlledTank()) { return; }        //if no tank, fail-
+	if (!ensure (GetControlledTank())) { return; }        //if no tank, fail-
 
 	
 	if (GetSightRayHitLocation(HitLocation))                     //if there is a valid ray hit location

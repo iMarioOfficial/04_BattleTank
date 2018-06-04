@@ -1,16 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #include "TankAIController.h"
-
-
-
+#include "BattleTank.h"
+#include "Tank.h"
+//depends on movement component via pathfinding
 
 
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	
 }
 
  void ATankAIController::Tick(float DeltaTime)  {
@@ -21,7 +21,7 @@ void ATankAIController::BeginPlay()
  
 	auto ControlledTank = Cast<ATank>(GetPawn());
 
-	 if (PlayerTank)    
+	 if (ensure(PlayerTank))   
 	 {
 		 // Move towards to player
 		 MoveToActor(PlayerTank, AcceptanceRadius); //TODO Check radius is in cm

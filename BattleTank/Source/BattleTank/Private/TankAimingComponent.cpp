@@ -17,6 +17,8 @@ UTankAimingComponent::UTankAimingComponent()
 
 void UTankAimingComponent::Initialise(UTankBarrel* BarrelToSet, UTurret* TurretToSet)
 {
+
+
 	//no need to protect since if toset is null it will jsut set as nullptr, which it already is
 	Barrel = BarrelToSet;
 	Turret = TurretToSet;
@@ -25,7 +27,7 @@ void UTankAimingComponent::Initialise(UTankBarrel* BarrelToSet, UTurret* TurretT
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 {
 
-	if (!Barrel) { return; }     //if there is no barrel then fail
+	if (!ensure(Barrel)) { return; }     //if there is no barrel then fail
 
 	FVector OutLaunchVelocity;  //out parameter                        //setting up variables for SuggestProjectileVelocity()
 	FVector StartLocation = Barrel->GetSocketLocation(FName("Projectile"));
@@ -54,7 +56,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
-	if (!Barrel || !Turret) { return; }
+	if (!ensure(Barrel) && !ensure(Turret)) { return; }
 
 	//get delta between barrel rotation and AimDirection
 	auto BarrelRotator = Barrel->GetForwardVector().Rotation(); //where I am aiming

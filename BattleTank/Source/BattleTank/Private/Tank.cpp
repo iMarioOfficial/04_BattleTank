@@ -3,6 +3,7 @@
 #include "Tank.h"
 #include "TankBarrel.h"
 #include "Projectile.h"
+#include "TankAimingComponent.h"
 
 
 
@@ -28,7 +29,7 @@ ATank::ATank()
 
 
 void ATank::AimAt(FVector HitLocation) {              //this is here to have both AI and player use the same aiming component
-	if (!TankAimingComponent) { return; }
+	if (!ensure(TankAimingComponent)) { return; }
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);     //delegates the aiming to AimingComponent calss
 }
 
@@ -36,11 +37,11 @@ void ATank::AimAt(FVector HitLocation) {              //this is here to have bot
 
 void ATank::Fire()
 {
+	if (!ensure(Barrel)) { return; }
 	bool isReloaded = (FPlatformTime::Seconds() - LastFireTime) > ReloadTime;
 
-	if (Barrel && isReloaded)
+	if (isReloaded)
 	{
-	
 
 		//spawn projectile at socket location of the barrel
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
