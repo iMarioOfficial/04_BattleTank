@@ -11,7 +11,7 @@
 
 class UTankBarrel; //forward declaration 
 class AProjectile;
-class UTankAimingComponent;
+
 
 UCLASS()
 class BATTLETANK_API ATank : public APawn
@@ -24,13 +24,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Firing")
 		void Fire();
 	
-	void AimAt(FVector HitLocation);
 
-protected:
-	
-	UPROPERTY(BlueprintReadOnly)
-	UTankAimingComponent* TankAimingComponent = nullptr;   //makes pointer to the class so it can be used easily
-	
 private:
 	
 	// Called when the game starts or when spawned
@@ -39,7 +33,7 @@ private:
 	//sets default values
 	ATank();
 
-	// TODO remove once firing is moved to aiming component
+
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 		float LaunchSpeed = 4000;   
 

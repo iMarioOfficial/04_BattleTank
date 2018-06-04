@@ -29,10 +29,7 @@ class BATTLETANK_API UTankAimingComponent : public UActorComponent
 
 public:	
 	
-	// Sets default values for this component's properties
-
-
-	void AimAt(FVector HitLocation, float LaunchSpeed);
+	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void Initialise(UTankBarrel* BarrelToSet, UTurret* TurretToSet);
@@ -45,6 +42,9 @@ protected:
 private:	
 	
 	UTankAimingComponent();
+
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
+		float LaunchSpeed = 4000;
 
 	UTankBarrel* Barrel = nullptr;
 	UTurret* Turret = nullptr;

@@ -22,7 +22,7 @@ void UTankAimingComponent::Initialise(UTankBarrel* BarrelToSet, UTurret* TurretT
 	Turret = TurretToSet;
 }
 
-void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
+void UTankAimingComponent::AimAt(FVector HitLocation)
 {
 
 	if (!ensure(Barrel)) { return; }     //if there is no barrel then fail

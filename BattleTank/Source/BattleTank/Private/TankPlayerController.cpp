@@ -4,19 +4,16 @@
 #include "TankPlayerController.h"
 #include "TankAimingComponent.h"
 #include "Engine/World.h"
-#include "Tank.h"
+
 
   FVector HitLocation;  //out parameter //here because when in aimtowards crosshair, in  getlookvecotrhit in getsightrayhit, it didnt recognise hitlocation
 
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	auto AimingComponent = GetControlledTank()->FindComponentByClass<UTankAimingComponent>();
-	if (!ensure(AimingComponent)) { return; }
-	
+	auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
+	if (!ensure(AimingComponent)) { return; }      //do this every time we aim in case we diue and deposses
 	FoundAimingComponent(AimingComponent);
-	
-	
 }
 
 
@@ -29,24 +26,17 @@ void ATankPlayerController::Tick(float DeltaTime)
 }
 
 
-ATank* ATankPlayerController::GetControlledTank() const
-{
-	return Cast<ATank>(GetPawn());          //method for use later. 
-
-}
-
-
-
 void  ATankPlayerController::AimTowardsCrosshair() 
 {
-	if (!ensure (GetControlledTank())) { return; }        //if no tank, fail-
+	auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
+	if (!ensure(AimingComponent)) { return; }
 
-	
+
 	if (GetSightRayHitLocation(HitLocation))                     //if there is a valid ray hit location
 	{
 	
 		//tell controlled tank to aim at this point
-		GetControlledTank()->AimAt(HitLocation);              //call aiming method
+		AimingComponent->AimAt(HitLocation);              //call aiming method
 
 
 			     

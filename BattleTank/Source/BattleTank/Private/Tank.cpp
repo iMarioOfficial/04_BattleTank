@@ -3,7 +3,7 @@
 #include "Tank.h"
 #include "TankBarrel.h"
 #include "Projectile.h"
-#include "TankAimingComponent.h"
+
 
 
 ATank::ATank()
@@ -16,16 +16,9 @@ ATank::ATank()
 void ATank::BeginPlay()
 {
 	Super::BeginPlay(); //Needed for BP BeginPlay to work
-	
-	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
+
 }
 
-
-
-void ATank::AimAt(FVector HitLocation) {              //this is here to have both AI and player use the same aiming component
-	if (!ensure(TankAimingComponent)) { return; }
-	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);     //delegates the aiming to AimingComponent calss
-}
 
 
 
