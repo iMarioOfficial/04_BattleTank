@@ -3,7 +3,6 @@
 
 #include "TankAIController.h"
 #include "BattleTank.h"
-#include "Tank.h"
 #include "TankAimingComponent.h"
 //depends on movement component via pathfinding
 
@@ -34,7 +33,7 @@ void ATankAIController::BeginPlay()
 	AimingComponent->AimAt(PlayerTank->GetActorLocation());
 		 
 	//Fire If ready
-	//ControlledTank->Fire(); //TODO Fix Firing
+	AimingComponent->Fire(); 
 	 
 
 

@@ -6,7 +6,9 @@
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"   //header for suggestprojectilevel
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Engine/World.h" //for getWorld
 #include "TankAimingComponent.generated.h"
+
 
 //Enum for aiming state
 UENUM()
@@ -18,6 +20,7 @@ enum class EFiringState : uint8
 };
 
 //Forward Declaration
+class AProjectile;
 class UTankBarrel; 
 class UTurret;
 
@@ -34,6 +37,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void Initialise(UTankBarrel* BarrelToSet, UTurret* TurretToSet);
 
+	UFUNCTION(BlueprintCallable, Category = "Firing")
+		void Fire();
+
 
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
@@ -49,8 +55,16 @@ private:
 	UTankBarrel* Barrel = nullptr;
 	UTurret* Turret = nullptr;
 
+	bool isReloaded = (FPlatformTime::Seconds() - LastFireTime) > ReloadTime;
+
 	void MoveBarrelTowards(FVector AimDirection);
 
-	
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		TSubclassOf<AProjectile> ProjectileBlueprint;  //forces the projectile selection in blueprint to be derrived from the projectile class
+
+
+	float ReloadTime = 3;
+	double LastFireTime = 0;
+
 	
 };
