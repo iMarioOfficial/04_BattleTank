@@ -22,10 +22,10 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 	auto AIForwardIntention = MoveVelocity.GetSafeNormal();
 
 	auto ForwardThrow = FVector::DotProduct(TankForward, AIForwardIntention);  //drive until perpendicular to forward to right in front of tank
-	IntendMoveForward(ForwardThrow * 3);
+	IntendMoveForward(ForwardThrow );
 
 	auto RightThrow = FVector::CrossProduct(TankForward, AIForwardIntention).Z;  //turn until parallel to tank, so facing tank
-	IntendTurnRight(RightThrow * 3);
+	IntendTurnRight(RightThrow );
 
 
 }
@@ -33,25 +33,25 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 
 void UTankMovementComponent::IntendMoveForward(float Throw)
 {
-	LeftTrack->SetThrottle(Throw * 3);
-	RightTrack->SetThrottle(Throw * 3);
+	LeftTrack->SetThrottle(Throw );
+	RightTrack->SetThrottle(Throw );
 }
 
 void UTankMovementComponent::IntendMoveBackwards(float Throw)
 {
-	LeftTrack->SetThrottle(Throw * 3);
-	RightTrack->SetThrottle(Throw * 3);
+	LeftTrack->SetThrottle(Throw );
+	RightTrack->SetThrottle(Throw );
 }
 
 void UTankMovementComponent::IntendTurnRight(float Throw)
 {
-	LeftTrack->SetThrottle(Throw * 2);
-	RightTrack->SetThrottle(-Throw * 2);
+	LeftTrack->SetThrottle(Throw );
+	RightTrack->SetThrottle(-Throw );
 
 }
 
 void UTankMovementComponent::IntendTurnLeft(float Throw )
 {
-	RightTrack->SetThrottle(Throw * 2);
-	LeftTrack->SetThrottle(-Throw * 2);
+	RightTrack->SetThrottle(Throw );
+	LeftTrack->SetThrottle(-Throw );
 }
