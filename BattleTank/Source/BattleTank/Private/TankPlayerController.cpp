@@ -32,8 +32,9 @@ void  ATankPlayerController::AimTowardsCrosshair()
 	auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
 	if (!ensure(AimingComponent)) { return; }
 
-
-	if (GetSightRayHitLocation(HitLocation))                     //if there is a valid ray hit location
+	bool bGotHitLocation = GetSightRayHitLocation(HitLocation);
+	UE_LOG(LogTemp, Warning, TEXT(" BGotHitLocation %i "), bGotHitLocation)
+	if (bGotHitLocation)                     //if there is a valid ray hit location
 	{
 	
 		//tell controlled tank to aim at this point
@@ -58,16 +59,13 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const  
 	FVector LookDirection;
 
 	if (GetLookDirection(ScreenLocation, LookDirection))                 //if theres a valid look direction     
-	{
-
-		
+	{		
 		//line trace along that lookdirection and see what we hit(up to max range)
-		GetLookVectorHitLocation(LookDirection, HitLocation);
-
+		return GetLookVectorHitLocation(LookDirection, HitLocation);
 
 	}
 
-	return true;
+	return false;
 
 }
 
