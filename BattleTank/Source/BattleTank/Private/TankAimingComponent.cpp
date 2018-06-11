@@ -41,6 +41,11 @@ void UTankAimingComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 }
 
+EFiringState UTankAimingComponent::GetFiringState() const
+{
+	return FiringState;
+}
+
 void UTankAimingComponent::Initialise(UTankBarrel* BarrelToSet, UTurret* TurretToSet)
 {
 	//no need to protect since if toset is null it will jsut set as nullptr, which it already is
@@ -130,3 +135,5 @@ void UTankAimingComponent::Fire()
 	}
 
 }
+
+

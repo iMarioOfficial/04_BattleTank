@@ -18,21 +18,21 @@ void ATankAIController::BeginPlay()
 	 Super::Tick(DeltaTime);
 
 	auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
- 
 	auto ControlledTank = GetPawn();
 
+	//Move towards Player
 	if (!ensure(PlayerTank && ControlledTank)) { return; }
-	 
-	// Move towards to player
 	MoveToActor(PlayerTank, AcceptanceRadius); //TODO Check radius is in cm
 		 
+	//Aim at Player
 	auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
 	if (!ensure(AimingComponent)) { return; }
-	
-	// Aim towards the player
 	AimingComponent->AimAt(PlayerTank->GetActorLocation());
 		 
-	//Fire If ready
+	//Fire at player
+	auto FiringState = AimingComponent->GetFiringState();
+
+	if(FiringState == EFiringState::Locked)
 	AimingComponent->Fire(); 
 	 
 

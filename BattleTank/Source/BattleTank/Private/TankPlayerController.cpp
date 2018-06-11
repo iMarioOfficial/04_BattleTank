@@ -33,7 +33,6 @@ void  ATankPlayerController::AimTowardsCrosshair()
 	if (!ensure(AimingComponent)) { return; }
 
 	bool bGotHitLocation = GetSightRayHitLocation(HitLocation);
-	UE_LOG(LogTemp, Warning, TEXT(" BGotHitLocation %i "), bGotHitLocation)
 	if (bGotHitLocation)                     //if there is a valid ray hit location
 	{
 	
