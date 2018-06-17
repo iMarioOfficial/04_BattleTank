@@ -18,8 +18,6 @@ class BATTLETANK_API AProjectile : public AActor
 public:	
 	AProjectile();
 	
-	virtual void Tick(float DeltaTime) override;
-
 	void LaunchProjectile(float Speed);
 protected:
 	virtual void BeginPlay() override;
@@ -33,7 +31,10 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UParticleSystemComponent* LaunchBlast = nullptr;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UParticleSystemComponent* ImpactBlast = nullptr;
 	
-	
+	UFUNCTION()
+		void OnHit(UPrimitiveComponent * HitComponent, AActor * OtherActor, UPrimitiveComponent * OtherComponent, FVector NormalImpulse, const FHitResult & Hit);
 	
 };
