@@ -59,7 +59,7 @@ private:
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-		float LaunchSpeed = 4000;
+		float LaunchSpeed = 40000;
 	
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
