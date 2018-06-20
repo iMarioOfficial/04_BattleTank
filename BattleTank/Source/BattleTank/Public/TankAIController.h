@@ -21,7 +21,7 @@ public:
 protected:
 	//How close AI Tank get to player
 		UPROPERTY(EditDefaultsOnly, Category = "Setup") 
-		float AcceptanceRadius = 8000; //80m  
+		float AcceptanceRadius = 4000; //40m  
 
 private:		
 		virtual void Tick(float DeltaTime) override;
