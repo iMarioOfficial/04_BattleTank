@@ -8,8 +8,7 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
-
-class UTankBarrel; //forward declaration 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTankDelegate);
 
 
 
@@ -26,6 +25,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Health")
 	float GetHealthPercent() const;  //return as health percentage between 0 and 1
 
+	FTankDelegate OnDeath;
 
 private:
 
