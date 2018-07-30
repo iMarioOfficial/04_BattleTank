@@ -24,7 +24,9 @@ protected:
 private:
 		
 
-		virtual void BeginPlay() override;
+	void SetPawn(APawn * InPawn);
+
+	virtual void BeginPlay() override;
 
 		virtual void Tick(float DeltaTime) override ;
 
@@ -47,6 +49,9 @@ private:
 			UPROPERTY(EditDefaultsOnly)
 				float LineTraceRange = 10000000000;  //100,000 km( is in cm)
 
+
+			UFUNCTION()
+				void OnPlayerTankDeath();
 };
 
 

@@ -4,9 +4,27 @@
 #include "TankPlayerController.h"
 #include "TankAimingComponent.h"
 #include "Engine/World.h"
-
+#include "Tank.h"
 
   FVector HitLocation;  //out parameter //here because when in aimtowards crosshair, in  getlookvecotrhit in getsightrayhit, it didnt recognise hitlocation
+
+  void ATankPlayerController::SetPawn(APawn* InPawn)
+  {
+	  Super::SetPawn(InPawn);
+	  if (InPawn)
+	  {
+		  auto PossessedTank = Cast<ATank>(InPawn);
+		  if (!ensure(PossessedTank)) { return; }
+
+		  PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPlayerTankDeath);  //subscribe to ondeath, and then handle it with possessedtankdeath
+	  }
+  }
+
+  void ATankPlayerController::OnPlayerTankDeath()
+  {
+	  StartSpectatingOnly();
+  }
+
 
 void ATankPlayerController::BeginPlay()
 {
@@ -108,3 +126,4 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 	return false; //line trace didnt succeed
 	
 }
+

@@ -4,12 +4,32 @@
 #include "TankAIController.h"
 #include "BattleTank.h"
 #include "TankAimingComponent.h"
+#include "Tank.h"//so wer can implement ondeath
 //depends on movement component via pathfinding
 
 
 void ATankAIController::BeginPlay()
 {
 	Super::BeginPlay();
+
+}
+
+void ATankAIController::SetPawn(APawn* InPawn)
+{
+	Super::SetPawn(InPawn);
+	if (InPawn)
+	{
+		auto PossessedTank = Cast<ATank>(InPawn);
+		if (!ensure(PossessedTank)) { return; }
+
+		PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankAIController::OnPossessedTankDeath);  //subscribe to ondeath, and then handle it with possessedtankdeath
+	}
+}
+
+void ATankAIController::OnPossessedTankDeath()
+{
+	if (!ensure(GetPawn())) { return; } //TODO Remove ensure if ok
+	GetPawn()->DetachFromControllerPendingDestroy();
 
 }
 
@@ -38,6 +58,8 @@ void ATankAIController::BeginPlay()
 
 
 }
+
+
 
 
 
