@@ -1,0 +1,2032 @@
+{
+  "Id": "1216b7b9-fec6-4e7b-b703-a20805f642b1",
+  "Pages": [
+    {
+      "Name": "Page 1",
+      "Id": "6a0ac435-59e1-4c6a-b0bb-b0b61908cb95",
+      "ChartObjects": [
+        {
+          "TypeFqn": "flowchart.terminator.start",
+          "BoundingBox": {
+            "X": 520.0,
+            "Y": 80.0,
+            "Width": 140.0,
+            "Height": 60.0,
+            "Left": 520.0,
+            "Right": 660.0,
+            "Top": 80.0,
+            "Bottom": 140.0,
+            "MidX": 590.0,
+            "MidY": 110.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 70.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "848abf0d-6e34-4f64-9a84-578a0c2ebe3e",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "60664dd6-f484-4a02-b62b-4b5014fe30cf",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "d3fce5dc-7109-49a3-8616-493411c6e296",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "548ac6d6-5959-451c-9bff-d12a5ef15397",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "1fdddf80-ae78-4c3f-a270-cd82d7fdee68",
+          "Text": "Begin The Game\r",
+          "Style": {
+            "ThemeIndex": 3,
+            "FillColor": {
+              "Red": 255,
+              "Green": 192,
+              "Blue": 0,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 141,
+              "Green": 115,
+              "Blue": 32,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.process.predefined",
+          "BoundingBox": {
+            "X": 520.0,
+            "Y": 180.0,
+            "Width": 140.0,
+            "Height": 60.0,
+            "Left": 520.0,
+            "Right": 660.0,
+            "Top": 180.0,
+            "Bottom": 240.0,
+            "MidX": 590.0,
+            "MidY": 210.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 70.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "b388dbd2-e4e6-413c-8d2e-3ce29f3a10a5",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "fe388ced-1e40-4bd5-a9cd-c94d8234e44b",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "88bc1cb3-dfba-4aa6-b9d1-f2a0e072fda1",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "269bc5a2-f073-47da-b254-b09727bcabb2",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "65996956-9513-4d6f-a2b5-5856fade5f4f",
+          "Text": "Initialise Stuff on Tank\r",
+          "Style": {
+            "ThemeIndex": 2,
+            "FillColor": {
+              "Red": 245,
+              "Green": 157,
+              "Blue": 86,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 155,
+              "Green": 73,
+              "Blue": 8,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.connector",
+          "BoundingBox": {
+            "X": 620.0,
+            "Y": 320.0,
+            "Width": 100.0,
+            "Height": 60.0,
+            "Left": 620.0,
+            "Right": 720.0,
+            "Top": 320.0,
+            "Bottom": 380.0,
+            "MidX": 670.0,
+            "MidY": 350.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "cd1ca0ed-5894-4378-ba01-37c8416907be",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "430a4c79-52bf-46dc-ac5c-aaa9060f9bf2",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "537005eb-049d-4e68-bd21-481b0ecc7eae",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "e9186e09-9a3b-4012-9685-e92fdd27eaf8",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "b9686949-b967-4a6c-a32c-3775d8d50c83",
+          "Text": "Aiming\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.connector",
+          "BoundingBox": {
+            "X": 460.0,
+            "Y": 320.0,
+            "Width": 100.0,
+            "Height": 60.0,
+            "Left": 460.0,
+            "Right": 560.0,
+            "Top": 320.0,
+            "Bottom": 380.0,
+            "MidX": 510.0,
+            "MidY": 350.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "d27ad590-230c-4ae8-8b75-cbb3a37eae6b",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "b0a55ca0-7928-41bc-bc02-043bef9fde15",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "3f4df741-fff7-4da7-a714-4114fd91e5fd",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "7b5b9e5e-effd-447f-b4e4-795ebadc27e4",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "35789fe4-f922-4397-9b87-342156cc4a15",
+          "Text": "Movement Input\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.process",
+          "BoundingBox": {
+            "X": 420.0,
+            "Y": 440.0,
+            "Width": 100.0,
+            "Height": 40.0,
+            "Left": 420.0,
+            "Right": 520.0,
+            "Top": 440.0,
+            "Bottom": 480.0,
+            "MidX": 470.0,
+            "MidY": 460.0,
+            "HalfHeight": 20.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "1fa16f2a-a331-418f-abb5-7210de334fac",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "5cbd59b0-7eff-4351-bc8c-af2796b88984",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "a191969d-04d1-4d50-b070-182aa7d66349",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "2f9189df-2246-435b-9916-b864fd17af59",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "1c312783-984f-41b6-ae86-1424f44980da",
+          "Text": "Intend Movement",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.merge",
+          "BoundingBox": {
+            "X": 380.0,
+            "Y": 560.0,
+            "Width": 100.0,
+            "Height": 80.0,
+            "Left": 380.0,
+            "Right": 480.0,
+            "Top": 560.0,
+            "Bottom": 640.0,
+            "MidX": 430.0,
+            "MidY": 600.0,
+            "HalfHeight": 40.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "29c410ab-bbbf-407a-aa90-00899f9e8b4e",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "8ff0eb1f-c4eb-407b-bb17-372be5106146",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "97ca4c0b-1bce-46a6-9cf0-5d3b390f46c9",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "b155964f-fa67-46f5-8744-9a5805f10a26",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "74331b06-595e-4386-b6d6-9281721e026d",
+          "Text": "Apply Forces on Track\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.preparation",
+          "BoundingBox": {
+            "X": 1140.0,
+            "Y": 80.0,
+            "Width": 100.0,
+            "Height": 60.0,
+            "Left": 1140.0,
+            "Right": 1240.0,
+            "Top": 80.0,
+            "Bottom": 140.0,
+            "MidX": 1190.0,
+            "MidY": 110.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "95d572bc-2b71-474d-aa74-9b357768a50f",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "601a1f61-52e2-415b-b8ee-d246926b2b5a",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "609e78cd-31f4-4de8-8abc-a591e1d1bdf0",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "59084c09-e174-42c7-bd6b-e396466ef7f2",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "2a086b10-0b3e-405b-8171-0da1a45ba378",
+          "Text": "Initialise\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.connector",
+          "BoundingBox": {
+            "X": 1280.0,
+            "Y": 220.0,
+            "Width": 100.0,
+            "Height": 60.0,
+            "Left": 1280.0,
+            "Right": 1380.0,
+            "Top": 220.0,
+            "Bottom": 280.0,
+            "MidX": 1330.0,
+            "MidY": 250.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "97568c08-cf35-492a-9eac-89542f560474",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "095e596f-c745-4a1f-9b60-0ce6996d1c1f",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "c293ce09-4511-49e0-a70d-c1c3b48fac9a",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "cb0091b5-8bc4-4eff-8140-797f553ede6b",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "3b3585d9-cf9f-4c2f-9b8e-1cebe9bf97ab",
+          "Text": "Movement ",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.connector",
+          "BoundingBox": {
+            "X": 960.0,
+            "Y": 180.0,
+            "Width": 100.0,
+            "Height": 60.0,
+            "Left": 960.0,
+            "Right": 1060.0,
+            "Top": 180.0,
+            "Bottom": 240.0,
+            "MidX": 1010.0,
+            "MidY": 210.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "a2d6ed57-27c5-4a06-a8f6-d52923191ad3",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "9c9c457f-55c0-439f-a92d-caec41a10ad1",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "6484cc79-df9c-42de-a991-e7e6790f44ed",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "8342b7ba-56d4-4a08-b2f8-dabf68b95c87",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "3d4527b1-3c88-4542-8d91-73a3fdfc4097",
+          "Text": "Aiming\r",
+          "Style": {
+            "ThemeIndex": null,
+            "FillColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0,
+              "Alpha": 255
+            },
+            "StrokeWidth": 10.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.document",
+          "BoundingBox": {
+            "X": 860.0,
+            "Y": 280.0,
+            "Width": 120.0,
+            "Height": 60.0,
+            "Left": 860.0,
+            "Right": 980.0,
+            "Top": 280.0,
+            "Bottom": 340.0,
+            "MidX": 920.0,
+            "MidY": 310.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 60.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "89ee0971-3c69-4ca3-aca3-04120bcceafc",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "f0fd9117-1e75-4ac8-8f2e-da6017b6a928",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "a691b086-5471-4afb-a882-60590ed54d26",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "8bc62f07-a95c-46e1-b2b2-f0e8926ca56c",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "419219e2-948c-4480-aabe-e9d61ef81a3d",
+          "Text": "Intend Aim Towards Player",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.process",
+          "BoundingBox": {
+            "X": 620.0,
+            "Y": 420.0,
+            "Width": 140.0,
+            "Height": 60.0,
+            "Left": 620.0,
+            "Right": 760.0,
+            "Top": 420.0,
+            "Bottom": 480.0,
+            "MidX": 690.0,
+            "MidY": 450.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 70.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "56cf93f4-f367-4e3c-ace2-d9dab41bb444",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "759a8028-7f3a-4465-9c53-03b30ec0012b",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "0a08e690-43e1-4372-8c56-11cc8e2ebb1d",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "7ee1c379-160e-422b-bf02-f030205eb317",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "c27e27e7-31ba-48b8-931b-87f4820eabbc",
+          "Text": "AimTowardsCrosshairs\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.decision",
+          "BoundingBox": {
+            "X": 680.0,
+            "Y": 580.0,
+            "Width": 100.0,
+            "Height": 100.0,
+            "Left": 680.0,
+            "Right": 780.0,
+            "Top": 580.0,
+            "Bottom": 680.0,
+            "MidX": 730.0,
+            "MidY": 630.0,
+            "HalfHeight": 50.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "8a3201a3-0f90-44d0-848f-3223d39bc68d",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "9e534cd9-305c-40de-9654-8e7a9b170bbc",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "9f84f7fb-beac-4e4c-8e4a-9d13b04165e3",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "7045d1aa-d9de-465a-bd17-7be90c92332d",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "e73181ea-8a19-4183-9894-ccb3bcd2c766",
+          "Text": "If there is a hit location\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.terminator.start",
+          "BoundingBox": {
+            "X": 860.0,
+            "Y": 400.0,
+            "Width": 100.0,
+            "Height": 40.0,
+            "Left": 860.0,
+            "Right": 960.0,
+            "Top": 400.0,
+            "Bottom": 440.0,
+            "MidX": 910.0,
+            "MidY": 420.0,
+            "HalfHeight": 20.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "8e9684e2-0fea-45a6-8747-106e771f2347",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "1273b029-1228-4a04-90ee-bff43d1e4a8a",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "b701eb0e-6655-42c8-a63b-c781e4f94f6b",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "1a4d1630-234e-4b27-a15a-2bd54ca845f1",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "1678a70c-aefa-4bc4-b5bb-873b2f2d059b",
+          "Text": "Get X,Y,Z look direction",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.process",
+          "BoundingBox": {
+            "X": 820.0,
+            "Y": 500.0,
+            "Width": 100.0,
+            "Height": 40.0,
+            "Left": 820.0,
+            "Right": 920.0,
+            "Top": 500.0,
+            "Bottom": 540.0,
+            "MidX": 870.0,
+            "MidY": 520.0,
+            "HalfHeight": 20.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "efba82ab-f569-4ece-b639-71b8859ad657",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "5719ed92-e6c3-4ade-a731-1c24240680bb",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "5e07148f-9400-4387-a702-dec3a0d0c644",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "22b7a07a-e072-4ce2-8fe4-c0800000dc50",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "a213f475-dfa1-47bf-8974-3a2028bae6d5",
+          "Text": "Line Trace to See what we hit",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.process",
+          "BoundingBox": {
+            "X": 680.0,
+            "Y": 780.0,
+            "Width": 100.0,
+            "Height": 40.0,
+            "Left": 680.0,
+            "Right": 780.0,
+            "Top": 780.0,
+            "Bottom": 820.0,
+            "MidX": 730.0,
+            "MidY": 800.0,
+            "HalfHeight": 20.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "f16b31ac-b34e-4bc6-9c86-c24b4d42895d",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "2929dea2-2b24-4d0d-bcd6-4a3e346ed64b",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "065c34bd-eafe-496a-902e-747575efc309",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "7a294c13-4ff2-42e6-a54c-2fbad8114b8f",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "b67cc56b-a2f0-44da-bfea-aef7d3857615",
+          "Text": "Aim At",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.documents",
+          "BoundingBox": {
+            "X": 760.0,
+            "Y": 840.0,
+            "Width": 120.0,
+            "Height": 80.0,
+            "Left": 760.0,
+            "Right": 880.0,
+            "Top": 840.0,
+            "Bottom": 920.0,
+            "MidX": 820.0,
+            "MidY": 880.0,
+            "HalfHeight": 40.0,
+            "HalfWidth": 60.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "dfdc8be4-dc13-4a1f-9246-69532c8d5397",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "329ab7ad-192a-4280-824b-398716d375a9",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "762a4f19-5145-4536-9bc3-4ba3d7a37ff9",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "0e580a1f-ba3f-4e6b-8cce-2d5d4d33aa5c",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "d819fafa-c419-4f65-a031-e3984f378669",
+          "Text": "Calc Launch Velocity and Turn into Vector",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.data",
+          "BoundingBox": {
+            "X": 900.0,
+            "Y": 960.0,
+            "Width": 120.0,
+            "Height": 80.0,
+            "Left": 900.0,
+            "Right": 1020.0,
+            "Top": 960.0,
+            "Bottom": 1040.0,
+            "MidX": 960.0,
+            "MidY": 1000.0,
+            "HalfHeight": 40.0,
+            "HalfWidth": 60.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "8b675fab-8d8b-40c4-834f-a653972d6a50",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "ceb5bd42-9b03-48ce-871d-c353e94c48b4",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "4ea12bbf-0552-4593-aea7-0e5af36c14a8",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "b1463b53-e212-495c-a604-4bcd93eaec9a",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "774ec4c9-2d3b-4624-8fef-c006c8151986",
+          "Text": "Move Barrel\r",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.merge",
+          "BoundingBox": {
+            "X": 1040.0,
+            "Y": 1100.0,
+            "Width": 100.0,
+            "Height": 80.0,
+            "Left": 1040.0,
+            "Right": 1140.0,
+            "Top": 1100.0,
+            "Bottom": 1180.0,
+            "MidX": 1090.0,
+            "MidY": 1140.0,
+            "HalfHeight": 40.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "80710b53-c695-496d-b0b3-bc8a382bac09",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "d43a73c8-81dc-45f5-bc19-3316e846ed9f",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "13e62579-4384-405e-ad92-9c0ca6482b40",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "b82e5170-e5b9-4f94-92e2-87fc3cff8f92",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "7b064248-9689-4a74-b687-ecc20c1737d0",
+          "Text": "Fire!",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.terminator.start",
+          "BoundingBox": {
+            "X": 1140.0,
+            "Y": 0.0,
+            "Width": 100.0,
+            "Height": 40.0,
+            "Left": 1140.0,
+            "Right": 1240.0,
+            "Top": 0.0,
+            "Bottom": 40.0,
+            "MidX": 1190.0,
+            "MidY": 20.0,
+            "HalfHeight": 20.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "077bb01a-f886-41e9-bff8-4ba72b3c44c6",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "52515a3e-3a94-4eb9-ae46-35cb88ccef3a",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "c91d190d-9607-43c9-95b6-01061467919e",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "3bf9a124-431a-4f23-9e83-ae13e2f12f01",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "3f4b5686-2748-4d9b-91dd-31df9f01026d",
+          "Text": "AI",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.process",
+          "BoundingBox": {
+            "X": 1280.0,
+            "Y": 360.0,
+            "Width": 140.0,
+            "Height": 80.0,
+            "Left": 1280.0,
+            "Right": 1420.0,
+            "Top": 360.0,
+            "Bottom": 440.0,
+            "MidX": 1350.0,
+            "MidY": 400.0,
+            "HalfHeight": 40.0,
+            "HalfWidth": 70.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "a38bf3b7-0e0a-4863-aebd-df9921c5134f",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "05d0a62d-2995-47e8-b26b-8d70c577965d",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "a16cf964-10a3-4296-a4a5-17094cc36a32",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "d26b23f8-c2b1-41fc-a6ef-5255fd04d077",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "1f556bb4-8411-4d50-b26c-b40af975df2e",
+          "Text": "RequestDirectMove()",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.merge",
+          "BoundingBox": {
+            "X": 1300.0,
+            "Y": 520.0,
+            "Width": 100.0,
+            "Height": 80.0,
+            "Left": 1300.0,
+            "Right": 1400.0,
+            "Top": 520.0,
+            "Bottom": 600.0,
+            "MidX": 1350.0,
+            "MidY": 560.0,
+            "HalfHeight": 40.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "77705b90-3f23-4d00-adf0-dc562687ad51",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "5ab4547b-c84e-4010-96dd-b95e823168f3",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "221b839d-c1e4-4a3a-8ef9-9ea351a04f64",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "0a46214d-7900-4693-a1fa-e45b8be5177f",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "f312c3d1-d8ea-4b61-b0d9-e5219c8b8a08",
+          "Text": "Merge",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        },
+        {
+          "TypeFqn": "flowchart.documents",
+          "BoundingBox": {
+            "X": 1500.0,
+            "Y": 440.0,
+            "Width": 100.0,
+            "Height": 60.0,
+            "Left": 1500.0,
+            "Right": 1600.0,
+            "Top": 440.0,
+            "Bottom": 500.0,
+            "MidX": 1550.0,
+            "MidY": 470.0,
+            "HalfHeight": 30.0,
+            "HalfWidth": 50.0
+          },
+          "ConnectorAttachPoints": [
+            {
+              "Id": "be5504a6-f512-4489-953d-1a44322c5afe",
+              "X": 0.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "87c171a3-366d-4fa3-9e72-03a87980c19c",
+              "X": 1.0,
+              "Y": 0.5
+            },
+            {
+              "Id": "b3b06a1a-c9b3-43d5-981b-83aef285d3e3",
+              "X": 0.5,
+              "Y": 0.0
+            },
+            {
+              "Id": "2f2167f5-a922-4a21-ae85-d2925fe3eb93",
+              "X": 0.5,
+              "Y": 1.0
+            }
+          ],
+          "Id": "4ca426a1-3926-4a4e-a4b3-4fff49d57612",
+          "Text": "Engine Work",
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": {
+              "Red": 192,
+              "Green": 80,
+              "Blue": 70,
+              "Alpha": 255
+            },
+            "StrokeColor": {
+              "Red": 121,
+              "Green": 71,
+              "Blue": 67,
+              "Alpha": 255
+            },
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255,
+              "Alpha": 255
+            },
+            "StrokeWidth": 1.0
+          },
+          "Connections": null
+        }
+      ],
+      "Connections": [
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "1fdddf80-ae78-4c3f-a270-cd82d7fdee68",
+          "FromAttachPointId": "548ac6d6-5959-451c-9bff-d12a5ef15397",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "65996956-9513-4d6f-a2b5-5856fade5f4f",
+          "ToAttachPointId": "88bc1cb3-dfba-4aa6-b9d1-f2a0e072fda1",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "65996956-9513-4d6f-a2b5-5856fade5f4f",
+          "FromAttachPointId": "269bc5a2-f073-47da-b254-b09727bcabb2",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "b9686949-b967-4a6c-a32c-3775d8d50c83",
+          "ToAttachPointId": "537005eb-049d-4e68-bd21-481b0ecc7eae",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "65996956-9513-4d6f-a2b5-5856fade5f4f",
+          "FromAttachPointId": "269bc5a2-f073-47da-b254-b09727bcabb2",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "35789fe4-f922-4397-9b87-342156cc4a15",
+          "ToAttachPointId": "3f4df741-fff7-4da7-a714-4114fd91e5fd",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "35789fe4-f922-4397-9b87-342156cc4a15",
+          "FromAttachPointId": "7b5b9e5e-effd-447f-b4e4-795ebadc27e4",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "1c312783-984f-41b6-ae86-1424f44980da",
+          "ToAttachPointId": "a191969d-04d1-4d50-b070-182aa7d66349",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "1c312783-984f-41b6-ae86-1424f44980da",
+          "FromAttachPointId": "2f9189df-2246-435b-9916-b864fd17af59",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "74331b06-595e-4386-b6d6-9281721e026d",
+          "ToAttachPointId": "97ca4c0b-1bce-46a6-9cf0-5d3b390f46c9",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "2a086b10-0b3e-405b-8171-0da1a45ba378",
+          "FromAttachPointId": "59084c09-e174-42c7-bd6b-e396466ef7f2",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "3b3585d9-cf9f-4c2f-9b8e-1cebe9bf97ab",
+          "ToAttachPointId": "c293ce09-4511-49e0-a70d-c1c3b48fac9a",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "2a086b10-0b3e-405b-8171-0da1a45ba378",
+          "FromAttachPointId": "59084c09-e174-42c7-bd6b-e396466ef7f2",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "3d4527b1-3c88-4542-8d91-73a3fdfc4097",
+          "ToAttachPointId": "9c9c457f-55c0-439f-a92d-caec41a10ad1",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "3d4527b1-3c88-4542-8d91-73a3fdfc4097",
+          "FromAttachPointId": "8342b7ba-56d4-4a08-b2f8-dabf68b95c87",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "419219e2-948c-4480-aabe-e9d61ef81a3d",
+          "ToAttachPointId": "f0fd9117-1e75-4ac8-8f2e-da6017b6a928",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "b9686949-b967-4a6c-a32c-3775d8d50c83",
+          "FromAttachPointId": "e9186e09-9a3b-4012-9685-e92fdd27eaf8",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "c27e27e7-31ba-48b8-931b-87f4820eabbc",
+          "ToAttachPointId": "0a08e690-43e1-4372-8c56-11cc8e2ebb1d",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "c27e27e7-31ba-48b8-931b-87f4820eabbc",
+          "FromAttachPointId": "7ee1c379-160e-422b-bf02-f030205eb317",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "e73181ea-8a19-4183-9894-ccb3bcd2c766",
+          "ToAttachPointId": "9f84f7fb-beac-4e4c-8e4a-9d13b04165e3",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "1678a70c-aefa-4bc4-b5bb-873b2f2d059b",
+          "FromAttachPointId": "1a4d1630-234e-4b27-a15a-2bd54ca845f1",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "a213f475-dfa1-47bf-8974-3a2028bae6d5",
+          "ToAttachPointId": "5e07148f-9400-4387-a702-dec3a0d0c644",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "a213f475-dfa1-47bf-8974-3a2028bae6d5",
+          "FromAttachPointId": "22b7a07a-e072-4ce2-8fe4-c0800000dc50",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "e73181ea-8a19-4183-9894-ccb3bcd2c766",
+          "ToAttachPointId": "9e534cd9-305c-40de-9654-8e7a9b170bbc",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "e73181ea-8a19-4183-9894-ccb3bcd2c766",
+          "FromAttachPointId": "7045d1aa-d9de-465a-bd17-7be90c92332d",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "b67cc56b-a2f0-44da-bfea-aef7d3857615",
+          "ToAttachPointId": "065c34bd-eafe-496a-902e-747575efc309",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "b67cc56b-a2f0-44da-bfea-aef7d3857615",
+          "FromAttachPointId": "7a294c13-4ff2-42e6-a54c-2fbad8114b8f",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "d819fafa-c419-4f65-a031-e3984f378669",
+          "ToAttachPointId": "762a4f19-5145-4536-9bc3-4ba3d7a37ff9",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "d819fafa-c419-4f65-a031-e3984f378669",
+          "FromAttachPointId": "0e580a1f-ba3f-4e6b-8cce-2d5d4d33aa5c",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "774ec4c9-2d3b-4624-8fef-c006c8151986",
+          "ToAttachPointId": "4ea12bbf-0552-4593-aea7-0e5af36c14a8",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "774ec4c9-2d3b-4624-8fef-c006c8151986",
+          "FromAttachPointId": "b1463b53-e212-495c-a604-4bcd93eaec9a",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "7b064248-9689-4a74-b687-ecc20c1737d0",
+          "ToAttachPointId": "13e62579-4384-405e-ad92-9c0ca6482b40",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "419219e2-948c-4480-aabe-e9d61ef81a3d",
+          "FromAttachPointId": "89ee0971-3c69-4ca3-aca3-04120bcceafc",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "e73181ea-8a19-4183-9894-ccb3bcd2c766",
+          "ToAttachPointId": "9f84f7fb-beac-4e4c-8e4a-9d13b04165e3",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "3f4b5686-2748-4d9b-91dd-31df9f01026d",
+          "FromAttachPointId": "3bf9a124-431a-4f23-9e83-ae13e2f12f01",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "2a086b10-0b3e-405b-8171-0da1a45ba378",
+          "ToAttachPointId": "609e78cd-31f4-4de8-8abc-a591e1d1bdf0",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "3b3585d9-cf9f-4c2f-9b8e-1cebe9bf97ab",
+          "FromAttachPointId": "cb0091b5-8bc4-4eff-8140-797f553ede6b",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "1f556bb4-8411-4d50-b26c-b40af975df2e",
+          "ToAttachPointId": "a16cf964-10a3-4296-a4a5-17094cc36a32",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "1f556bb4-8411-4d50-b26c-b40af975df2e",
+          "FromAttachPointId": "d26b23f8-c2b1-41fc-a6ef-5255fd04d077",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "f312c3d1-d8ea-4b61-b0d9-e5219c8b8a08",
+          "ToAttachPointId": "221b839d-c1e4-4a3a-8ef9-9ea351a04f64",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "4ca426a1-3926-4a4e-a4b3-4fff49d57612",
+          "FromAttachPointId": "be5504a6-f512-4489-953d-1a44322c5afe",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "1f556bb4-8411-4d50-b26c-b40af975df2e",
+          "ToAttachPointId": "05d0a62d-2995-47e8-b26b-8d70c577965d",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        },
+        {
+          "ConnectionRoutingStyle": 0,
+          "FromChartObjectId": "4ca426a1-3926-4a4e-a4b3-4fff49d57612",
+          "FromAttachPointId": "be5504a6-f512-4489-953d-1a44322c5afe",
+          "FromX": null,
+          "FromY": null,
+          "FromAttachPointStyle": 0,
+          "ToChartObjectId": "f312c3d1-d8ea-4b61-b0d9-e5219c8b8a08",
+          "ToAttachPointId": "5ab4547b-c84e-4010-96dd-b95e823168f3",
+          "ToX": null,
+          "ToY": null,
+          "ToAttachPointStyle": 1,
+          "Style": {
+            "ThemeIndex": 0,
+            "FillColor": null,
+            "StrokeColor": null,
+            "TextColor": null,
+            "StrokeWidth": 0.0
+          },
+          "IsThemeOverridden": false
+        }
+      ],
+      "Theme": {
+        "Id": "ba1595b3-0a2b-4d1e-bd9a-aaa06bee17e3",
+        "IsSystem": true,
+        "Title": "Modern",
+        "TextColor": {
+          "Red": 255,
+          "Green": 255,
+          "Blue": 255,
+          "Alpha": 255
+        },
+        "LabelHorizontalPadding": 32.0,
+        "LabelVerticalPadding": 8.0,
+        "CornerRadius": 8.0,
+        "StrokeWidth": 1.0,
+        "MinimumWidth": 44.0,
+        "MinimumHeight": 44.0,
+        "FillColors": [
+          {
+            "Red": 192,
+            "Green": 80,
+            "Blue": 70,
+            "Alpha": 255
+          },
+          {
+            "Red": 75,
+            "Green": 172,
+            "Blue": 198,
+            "Alpha": 255
+          },
+          {
+            "Red": 245,
+            "Green": 157,
+            "Blue": 86,
+            "Alpha": 255
+          },
+          {
+            "Red": 255,
+            "Green": 192,
+            "Blue": 0,
+            "Alpha": 255
+          },
+          {
+            "Red": 157,
+            "Green": 187,
+            "Blue": 97,
+            "Alpha": 255
+          },
+          {
+            "Red": 171,
+            "Green": 154,
+            "Blue": 192,
+            "Alpha": 255
+          }
+        ],
+        "StrokeColors": [
+          {
+            "Red": 121,
+            "Green": 71,
+            "Blue": 67,
+            "Alpha": 255
+          },
+          {
+            "Red": 31,
+            "Green": 87,
+            "Blue": 102,
+            "Alpha": 255
+          },
+          {
+            "Red": 155,
+            "Green": 73,
+            "Blue": 8,
+            "Alpha": 255
+          },
+          {
+            "Red": 141,
+            "Green": 115,
+            "Blue": 32,
+            "Alpha": 255
+          },
+          {
+            "Red": 79,
+            "Green": 98,
+            "Blue": 41,
+            "Alpha": 255
+          },
+          {
+            "Red": 83,
+            "Green": 65,
+            "Blue": 105,
+            "Alpha": 255
+          }
+        ],
+        "TextColors": [
+          {
+            "Red": 255,
+            "Green": 255,
+            "Blue": 255,
+            "Alpha": 255
+          },
+          {
+            "Red": 255,
+            "Green": 255,
+            "Blue": 255,
+            "Alpha": 255
+          },
+          {
+            "Red": 255,
+            "Green": 255,
+            "Blue": 255,
+            "Alpha": 255
+          },
+          {
+            "Red": 255,
+            "Green": 255,
+            "Blue": 255,
+            "Alpha": 255
+          },
+          {
+            "Red": 255,
+            "Green": 255,
+            "Blue": 255,
+            "Alpha": 255
+          },
+          {
+            "Red": 255,
+            "Green": 255,
+            "Blue": 255,
+            "Alpha": 255
+          }
+        ],
+        "ConnectorStrokeWidth": 1.0,
+        "ConnectorColor": {
+          "Red": 0,
+          "Green": 0,
+          "Blue": 0,
+          "Alpha": 255
+        },
+        "CollapsedIndicatorColor": null,
+        "DeleteConnectorBackgroundColor": null,
+        "DeleteConnectorForegroundColor": null,
+        "FontSize": 14.0
+      }
+    }
+  ],
+  "FileVersion": {
+    "MajorVersion": 1,
+    "MajorVersionRevision": 0,
+    "MinorVersion": 0,
+    "MinorVersionRevision": 0
+  },
+  "PlatformTag": null
+}
