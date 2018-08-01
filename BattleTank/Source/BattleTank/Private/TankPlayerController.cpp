@@ -17,12 +17,14 @@
 		  if (!ensure(PossessedTank)) { return; }
 
 		  PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPlayerTankDeath);  //subscribe to ondeath, and then handle it with possessedtankdeath
+		
 	  }
   }
 
   void ATankPlayerController::OnPlayerTankDeath()
   {
 	  StartSpectatingOnly();
+
   }
 
 

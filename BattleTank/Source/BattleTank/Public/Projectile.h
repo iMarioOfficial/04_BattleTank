@@ -20,6 +20,8 @@ public:
 	AProjectile();
 	
 	void LaunchProjectile(float Speed);
+
+	
 protected:
 	virtual void BeginPlay() override;
 

@@ -29,8 +29,19 @@ void ATankAIController::SetPawn(APawn* InPawn)
 void ATankAIController::OnPossessedTankDeath()
 {
 	if (!ensure(GetPawn())) { return; } //TODO Remove ensure if ok
-	GetPawn()->DetachFromControllerPendingDestroy();
+	auto OurTank = GetPawn();
+	
+	auto TankLocation = OurTank->GetActorLocation();
+	auto TankRotation = OurTank->GetActorRotation();
+	
+	OurTank->DetachFromControllerPendingDestroy();
+	OurTank->Destroy(false, false);
 
+
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), DeathExplosion, TankLocation, TankRotation, false, EPSCPoolMethod::None);
+
+
+	
 }
 
  void ATankAIController::Tick(float DeltaTime)  {
