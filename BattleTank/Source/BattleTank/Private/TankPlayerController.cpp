@@ -17,13 +17,15 @@
 		  if (!ensure(PossessedTank)) { return; }
 
 		  PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPlayerTankDeath);  //subscribe to ondeath, and then handle it with possessedtankdeath
-		
 	  }
   }
 
   void ATankPlayerController::OnPlayerTankDeath()
   {
 	  StartSpectatingOnly();
+	  
+	  auto Tank = Cast<ATank>(GetPawn());
+	  Tank->TankExplosion(true, Tank->GetActorLocation(), Tank->GetActorRotation());
 
   }
 

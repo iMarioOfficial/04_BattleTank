@@ -24,9 +24,9 @@ protected:
 private:
 		
 
-	void SetPawn(APawn * InPawn);
+		void SetPawn(APawn * InPawn);
 
-	virtual void BeginPlay() override;
+		virtual void BeginPlay() override;
 
 		virtual void Tick(float DeltaTime) override ;
 

@@ -6,6 +6,9 @@
 #include "CoreMinimal.h"
 #include "Engine/World.h" //for getWorld
 #include "GameFramework/Pawn.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+#include "Runtime/Engine/Classes/Particles/ParticleSystem.h"
 #include "Tank.generated.h"
 
 
@@ -20,6 +23,8 @@ class BATTLETANK_API ATank : public APawn
 
 
 public:
+	
+	
 	//called by the engine when actor damage is dealt(is in explosion radius)
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
 	
@@ -28,6 +33,14 @@ public:
 
 	FTankDelegate OnDeath;
 
+	bool isDead;
+	
+	void TankExplosion(bool Death,  FVector TankLocation, FRotator TankRotation);
+
+protected:
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
+		UParticleSystem* DeathExplosion = nullptr;
 private:
 
 	ATank();
@@ -41,6 +54,7 @@ private:
 	int32 CurrentHealth; //initialised in beginplay
 
 
+	
 
 
 

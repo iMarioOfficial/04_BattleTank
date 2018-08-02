@@ -14,14 +14,6 @@ void ATankAIController::BeginPlay()
 
 }
 
-ATankAIController::ATankAIController()
-{
-	static ConstructorHelpers::FObjectFinder<UParticleSystem> DeathExplosionObj(TEXT("ParticleSystem'/Game/Tank/DeathExplosion.DeathExplosion'"));
-	if (DeathExplosionObj.Object)
-	{
-		DeathExplosion = DeathExplosionObj.Object;
-	}
-}
 
 void ATankAIController::SetPawn(APawn* InPawn)
 {
@@ -37,19 +29,13 @@ void ATankAIController::SetPawn(APawn* InPawn)
 
 void ATankAIController::OnPossessedTankDeath()
 {
-	if (!ensure(GetPawn())) { return; } //TODO Remove ensure if ok
-	auto OurTank = GetPawn();
-	
-	auto TankLocation = OurTank->GetActorLocation();
-	auto TankRotation = OurTank->GetActorRotation();
+	if (!GetPawn()) { return; } //TODO Remove ensure if ok
+	auto OurTank =  Cast<ATank>(GetPawn());
 	
 	OurTank->DetachFromControllerPendingDestroy();
 	OurTank->Destroy(false, false);
 
-
-	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), DeathExplosion, TankLocation, TankRotation, false, EPSCPoolMethod::None);
-
-
+	OurTank->TankExplosion(true, OurTank->GetActorLocation(), OurTank->GetActorRotation());
 	
 }
 
@@ -62,21 +48,26 @@ void ATankAIController::Tick(float DeltaTime)  {
 	auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
 	auto ControlledTank = GetPawn();
 
-	//Move towards Player
-	if (!ensure(PlayerTank && ControlledTank)) { return; }
-	MoveToActor(PlayerTank, AcceptanceRadius); //TODO Check radius is in cm
-		 
-	//Aim at Player
-	auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
-	if (!ensure(AimingComponent)) { return; }
-	AimingComponent->AimAt(PlayerTank->GetActorLocation());
-		 
-	//Fire at player
-	auto FiringState = AimingComponent->GetFiringState();
+	auto Tank = Cast<ATank>(PlayerTank);
+	//while (!Tank->isDead)
+	//{
 
-	if(FiringState == EFiringState::Locked)
-	AimingComponent->Fire(); 
-	 
+		//Move towards Player
+		if (!ensure(PlayerTank && ControlledTank)) { return; }
+		MoveToActor(PlayerTank, AcceptanceRadius); //TODO Check radius is in cm
+
+
+		//Aim at Player
+		auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
+		if (!ensure(AimingComponent)) { return; }
+		AimingComponent->AimAt(PlayerTank->GetActorLocation());
+
+		//Fire at player
+		auto FiringState = AimingComponent->GetFiringState();
+
+		if (FiringState == EFiringState::Locked)
+			AimingComponent->Fire();
+//	}
 
 
 }

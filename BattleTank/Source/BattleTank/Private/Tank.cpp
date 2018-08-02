@@ -12,6 +12,11 @@ ATank::ATank()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> DeathExplosionObj(TEXT("ParticleSystem'/Game/Tank/DeathExplosion.DeathExplosion'"));
+	if (DeathExplosionObj.Object)
+	{
+		DeathExplosion = DeathExplosionObj.Object;
+	}
 }
 
 void ATank::BeginPlay()
@@ -19,7 +24,6 @@ void ATank::BeginPlay()
 	Super::BeginPlay();
 	CurrentHealth = StartingHealth;
 }
-
 
 
 float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser)
@@ -35,3 +39,9 @@ float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEv
 	return DamageToApply;
 }
 
+void ATank::TankExplosion(bool Death, FVector TankLocation, FRotator TankRotation)
+{
+	isDead = Death;
+
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), DeathExplosion, TankLocation, TankRotation, false, EPSCPoolMethod::None);
+}

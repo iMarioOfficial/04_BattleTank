@@ -5,9 +5,7 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Particles/ParticleSystem.h"
-#include "UObject/ConstructorHelpers.h"
 #include "TankAIController.generated.h"
 
 /**
@@ -25,13 +23,8 @@ protected:
 	//How close AI Tank get to player
 		UPROPERTY(EditDefaultsOnly, Category = "Setup") 
 		float AcceptanceRadius = 4000; //40m  
-		
-		UPROPERTY(EditDefaultsOnly, Category = "Explosion")
-			UParticleSystem* DeathExplosion = nullptr;
 
 private:		
-	
-		ATankAIController();
 
 		virtual void Tick(float DeltaTime) override;
 		
