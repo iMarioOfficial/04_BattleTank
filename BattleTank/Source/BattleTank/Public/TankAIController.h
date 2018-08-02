@@ -7,6 +7,7 @@
 #include "AIController.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Runtime/Engine/Classes/Particles/ParticleSystem.h"
+#include "UObject/ConstructorHelpers.h"
 #include "TankAIController.generated.h"
 
 /**
@@ -29,6 +30,9 @@ protected:
 			UParticleSystem* DeathExplosion = nullptr;
 
 private:		
+	
+		ATankAIController();
+
 		virtual void Tick(float DeltaTime) override;
 		
 		virtual void SetPawn(APawn* InPawn) override;

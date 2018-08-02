@@ -14,6 +14,15 @@ void ATankAIController::BeginPlay()
 
 }
 
+ATankAIController::ATankAIController()
+{
+	static ConstructorHelpers::FObjectFinder<UParticleSystem> DeathExplosionObj(TEXT("ParticleSystem'/Game/Tank/DeathExplosion.DeathExplosion'"));
+	if (DeathExplosionObj.Object)
+	{
+		DeathExplosion = DeathExplosionObj.Object;
+	}
+}
+
 void ATankAIController::SetPawn(APawn* InPawn)
 {
 	Super::SetPawn(InPawn);
@@ -44,7 +53,9 @@ void ATankAIController::OnPossessedTankDeath()
 	
 }
 
- void ATankAIController::Tick(float DeltaTime)  {
+
+
+void ATankAIController::Tick(float DeltaTime)  {
 
 	 Super::Tick(DeltaTime);
 
