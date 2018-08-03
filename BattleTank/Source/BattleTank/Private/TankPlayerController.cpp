@@ -13,7 +13,7 @@
 	  Super::SetPawn(InPawn);
 	  if (InPawn)
 	  {
-		  auto PossessedTank = Cast<ATank>(InPawn);
+		PossessedTank = Cast<ATank>(InPawn);
 		  if (!ensure(PossessedTank)) { return; }
 
 		  PossessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPlayerTankDeath);  //subscribe to ondeath, and then handle it with possessedtankdeath
@@ -21,12 +21,10 @@
   }
 
   void ATankPlayerController::OnPlayerTankDeath()
-  {
-	  StartSpectatingOnly();
-	  
-	  auto Tank = Cast<ATank>(GetPawn());
-	  Tank->TankExplosion(true, Tank->GetActorLocation(), Tank->GetActorRotation());
-
+  { 
+	PossessedTank->TankExplosion(true, PossessedTank->GetActorLocation(), PossessedTank->GetActorRotation());
+	PossessedTank->SetActorHiddenInGame(true);
+	StartSpectatingOnly();
   }
 
 

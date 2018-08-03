@@ -41,16 +41,14 @@ void ATankAIController::OnPossessedTankDeath()
 
 
 
-void ATankAIController::Tick(float DeltaTime)  {
+void ATankAIController::Tick(float DeltaTime)  
+{
 
 	 Super::Tick(DeltaTime);
 
 	auto PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
 	auto ControlledTank = GetPawn();
 
-	auto Tank = Cast<ATank>(PlayerTank);
-	while (!Tank->isDead)
-	{
 
 		//Move towards Player
 		if (!ensure(PlayerTank && ControlledTank)) { return; }
@@ -67,8 +65,8 @@ void ATankAIController::Tick(float DeltaTime)  {
 
 		if (FiringState == EFiringState::Locked)
 			AimingComponent->Fire();
-	}
 
+	
 
 }
 

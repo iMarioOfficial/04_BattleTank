@@ -41,7 +41,5 @@ float ATank::TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEv
 
 void ATank::TankExplosion(bool Death, FVector TankLocation, FRotator TankRotation)
 {
-	isDead = Death;
-
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), DeathExplosion, TankLocation, TankRotation, false, EPSCPoolMethod::None);
 }

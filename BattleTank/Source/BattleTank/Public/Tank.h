@@ -32,8 +32,6 @@ public:
 	float GetHealthPercent() const;  //return as health percentage between 0 and 1
 
 	FTankDelegate OnDeath;
-
-	bool isDead;
 	
 	void TankExplosion(bool Death,  FVector TankLocation, FRotator TankRotation);
 

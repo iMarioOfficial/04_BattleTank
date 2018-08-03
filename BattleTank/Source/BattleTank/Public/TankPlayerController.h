@@ -5,6 +5,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "Tank.h"
 #include "TankPlayerController.generated.h"   //must be the last include
 
 class UTankAimingComponent;
@@ -25,6 +26,8 @@ private:
 		
 
 		void SetPawn(APawn * InPawn);
+
+		ATank* PossessedTank;
 
 		virtual void BeginPlay() override;
 
