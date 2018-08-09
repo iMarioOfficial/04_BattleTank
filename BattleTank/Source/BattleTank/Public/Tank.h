@@ -39,6 +39,7 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Explosion")
 		UParticleSystem* DeathExplosion = nullptr;
+
 private:
 
 	ATank();
