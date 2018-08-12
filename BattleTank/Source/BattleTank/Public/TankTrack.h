@@ -17,16 +17,12 @@ class BATTLETANK_API UTankTrack : public UStaticMeshComponent
 private:
 	 UTankTrack();
 
-	 virtual void BeginPlay() override;
 
-	 void ApplySidewaysForce();
-
-	 UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+	 TArray<class ASprungWheel*> GetWheels() const;
 	
-	 void DriveTrack();
+	 void DriveTrack(float CurrentThrottle);
 
-	 float CurrentThrottle = 2;
+
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Input")

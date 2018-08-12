@@ -21,9 +21,18 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
+	void AddDrivingForce(float ForceMagnitude);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+
+
+private:	
+
+	void SetupConstraint();
 
 	//static meshes
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -39,13 +48,6 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 		UPhysicsConstraintComponent* AxleWheelConstraint = nullptr;
-
-
-private:	
-
-	void SetupConstraint();
-
-	
 
 	
 	
