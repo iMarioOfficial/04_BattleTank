@@ -25,10 +25,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-private:	
-
-	void SetupConstraint();
-
 	//static meshes
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	    USphereComponent* Wheel = nullptr;
@@ -43,6 +39,13 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 		UPhysicsConstraintComponent* AxleWheelConstraint = nullptr;
+
+
+private:	
+
+	void SetupConstraint();
+
+	
 
 	
 	
