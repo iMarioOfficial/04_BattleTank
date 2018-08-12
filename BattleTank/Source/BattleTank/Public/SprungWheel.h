@@ -34,6 +34,13 @@ private:
 
 	void SetupConstraint();
 
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
+	void ApplyForce();
+
+	float TotalForceMagnitudeThisFrame = 0;
+
 	//static meshes
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	    USphereComponent* Wheel = nullptr;
