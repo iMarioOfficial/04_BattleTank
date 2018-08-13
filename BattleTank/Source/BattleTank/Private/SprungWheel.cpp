@@ -63,7 +63,6 @@ void ASprungWheel::SetupConstraint()
 
 void ASprungWheel::OnHit(UPrimitiveComponent * HitComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)
 {
-	UE_LOG(LogTemp, Warning, TEXT("ouch"));
 	ApplyForce();
 }
 
